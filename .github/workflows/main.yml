@@ -12,7 +12,7 @@ jobs:
     - name: Build deps
       run: |  
         wget https://releases.llvm.org/9.0.0/llvm-9.0.0.src.tar.xz
-        tar -xzf llvm-9.0.0.src.tar.xz 
+        tar -xf llvm-9.0.0.src.tar.xz 
         cd llvm-9.0.0.src
         mkdir -p build
         cd build
