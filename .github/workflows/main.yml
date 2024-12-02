@@ -11,6 +11,7 @@ jobs:
 
     - name: Build deps
       run: |  
+        sudo apt install llvm-config
         wget https://releases.llvm.org/9.0.0/llvm-9.0.0.src.tar.xz
         tar -xf llvm-9.0.0.src.tar.xz 
         cd llvm-9.0.0.src
