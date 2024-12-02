@@ -9,7 +9,15 @@ jobs:
       uses: actions/checkout@v4
 
 
-    - name: Build C Code
+    - name: Build deps
       run: |  
+        wget https://releases.llvm.org/9.0.0/llvm-9.0.0.src.tar.xz.sig
+        tar -xzf llvm-9.0.0.src.tar.xz 
+        cd llvm-9.0.0.src
+        mkdir -p build
+        cd build
+        cmake ..
+    - name: Build C Code
+      run: |         
         ./configure
         make
